@@ -87,7 +87,7 @@ export default function Modal({ theme, styled, click, children, }) {
     addTestimonies
 
 
-    function addService(e) {
+    function addTestimonies(e) {
         e.preventDefault()
 
         const filename = generateUUID()
