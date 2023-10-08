@@ -85,6 +85,31 @@ export default function Modal({ theme, styled, click, children, }) {
         Object.keys(obj).length > 0 && writeUserData(`articles/${item !== undefined ? item : filename}`, obj, setUserData, setUserSuccess)
     }
     addTestimonies
+
+
+    function addService(e) {
+        e.preventDefault()
+
+        const filename = generateUUID()
+        const obj = {
+            ['servicio remoto']: check,
+            [e.target[1].name]: e.target[1].value,
+            [e.target[2].name]: e.target[2].value,
+            [e.target[3].name]: e.target[3].value,
+            [e.target[4].name]: e.target[4].value,
+            [e.target[5].name]: e.target[5].value,
+            [e.target[6].name]: e.target[6].value,
+        }
+
+        console.log(obj)
+        e.target[0].files[0] && uploadIMG(`services/${item !== undefined ? item.uid : filename}`, 'services', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
+        e.target[0].files[0] === undefined && writeUserData(`services/${item !== undefined ? item.uid : filename}`, obj, setUserData, setUserSuccess)
+
+    }
+
+
+
+
     function addContact(e) {
         e.preventDefault()
 

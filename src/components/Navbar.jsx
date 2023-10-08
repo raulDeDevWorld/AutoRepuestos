@@ -28,7 +28,7 @@ export default function Navbar({ children }) {
         <nav className="w-screen fixed top-0 z-10 ">
             <div className="max-w-screen flex flex-wrap items-center justify-between bg-gray-950 mx-auto p-4 z-[1000]">
                 <a className="flex items-center text-white">
-                    <img src="/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />AlvaroGC
+                    <img src="/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />AUMary
                 </a>
                 <button type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={() => setNav(!nav)}>
                     <span className="sr-only">Open menu</span>

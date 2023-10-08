@@ -94,7 +94,7 @@ function Home() {
           </ul>
         </div>
       </section>
-       <section className='w-full pt-[70px]' id="Testimonios">
+       {/* <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
         <div className='min-h-screen w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
             {
@@ -105,7 +105,7 @@ function Home() {
               )
             }
         </div>
-      </section>
+      </section> */}
       {/* <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
         <div className='min-h-screen w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
