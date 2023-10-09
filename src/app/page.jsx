@@ -70,7 +70,7 @@ function Home() {
             <div className='flex flex-col'><span className='text-[#DC0000] text-[16px]'>Celeridad</span></div>
           </div> */}
           <div className=' lg:grid lg:grid-cols-2 lg:gap-5 '>
-            <Link href="#Productos"><Button theme="Secondary" >Servicios</Button></Link>
+            <Link href="#Productos"><Button theme="Secondary" >Productos</Button></Link>
             <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20Alvaro`}><Button theme="Primary" >Contactar</Button></Link>
           </div>
         </div>
