@@ -437,7 +437,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                 <input type="text" name="facebook" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['facebook']} />
                             </div>
                             <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Twiter</label>
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">TiK Tok</label>
                                 <input type="text" name="twiter" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={data && data.contactos && data.contactos['twiter']} />
                             </div>
                             <div className="sm:col-span-3">
