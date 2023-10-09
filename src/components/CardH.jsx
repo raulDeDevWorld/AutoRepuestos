@@ -33,10 +33,10 @@ export default function CardH({ image, service, description, remote, cost, time,
 
                 <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8">
-                        <div className=" font-bold text-xl mb-2 text-[#00A582]">
+                        <div className=" font-bold text-xl mb-2 text-[#DC0000]">
                             {service}
                             <p className="w-full text-sm text-gray-600 flex items-center justify-start text-right font-normal">
-                                <span className={`inline-block h-[5px] w-[5px] mr-[5px] rounded-[5px] bg-[#00A582] }`}>
+                                <span className={`inline-block h-[5px] w-[5px] mr-[5px] rounded-[5px] bg-[#DC0000] }`}>
                                 </span> {i.marca}
                             </p>
                         </div>

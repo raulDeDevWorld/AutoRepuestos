@@ -26,7 +26,7 @@ export default function Navbar({ children }) {
     
     return (
         <nav className="w-screen fixed top-0 z-10 ">
-            <div className="max-w-screen flex flex-wrap items-center justify-between bg-gray-950 mx-auto p-4 z-[1000]">
+            <div className="max-w-screen flex flex-wrap items-center justify-between bg-[#DC0000] border-b-[10px] border-black mx-auto p-4 z-[1000]">
                 <a className="flex items-center text-white">
                     <img src="/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />AUMary
                 </a>
@@ -36,27 +36,27 @@ export default function Navbar({ children }) {
                 </button>
             </div>
             {<div className={`absolute top-[60px] w-1/2  transition-all z-0 ${nav ? 'right-0' : 'right-[-550px]'} lg:w-auto lg:right-[35px] lg:top-[0px] lg:flex lg:h-[60px]`} >
-                <ul className="flex flex-col bg-gray-950 p-4 lg:p-0 mt-4 font-normal border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:flex-row lg:items-center">
+                <ul className="flex flex-col bg-[#DC0000] font-bold p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:flex-row lg:items-center">
                     <li>
-                        <a href="#" className={` lg:block py-2 pl-3 pr-4 text-gray-200 bg-[#00A582] rounded lg:bg-transparent lg:p-0 ${active === undefined && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler(undefined)}>Inicio</a>
+                        <a href="#" className={` lg:block py-2 pl-3 pr-4 text-white font-bold bg-[#00A582] rounded lg:bg-transparent lg:p-0 ${active === undefined && 'lg:text-black' }`} onClick={()=>pathnameHandler(undefined)}>Inicio</a>
                     </li>
                     <li>
-                        <a href="#Productos" className={` lg:block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Productos' && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler('Productos')}>Productos</a>
+                        <a href="#Productos" className={` lg:block py-2 pl-3 pr-4 text-white font-bold  rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Productos' && 'lg:text-black' }`} onClick={()=>pathnameHandler('Productos')}>Productos</a>
                     </li>
                     <li>
-                        <a href="#Testimonios" className={` lg:block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Testimonios' && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler('Testimonios')}>Testimonios</a>
+                        <a href="#Testimonios" className={` lg:block py-2 pl-3 pr-4 text-white font-bold  rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Testimonios' && 'lg:text-black' }`} onClick={()=>pathnameHandler('Testimonios')}>Testimonios</a>
                     </li>
                     {/* <li>
-                        <a href="#Articulos" className={` lg:block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Articulos' && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler('Articulos')}>Articulos</a>
+                        <a href="#Articulos" className={` lg:block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Articulos' && 'lg:text-black' }`} onClick={()=>pathnameHandler('Articulos')}>Articulos</a>
                     </li> */}
                     {/* <li>
-                        <a href="#AcercaDeMi" className="block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 ${active === undefined && 'lg:text-[#00A582]' }`} onClick={pathnameHandler}>Acerca de mi</a>
+                        <a href="#AcercaDeMi" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 ${active === undefined && 'lg:text-black' }`} onClick={pathnameHandler}>Acerca de mi</a>
                     </li> */}
                     <li>
-                        <a href="#Contactos" className={` lg:block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Contactos' && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler('Contactos')}>Contactos</a>
+                        <a href="#Contactos" className={` lg:block py-2 pl-3 pr-4 text-white font-bold  rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Contactos' && 'lg:text-black' }`} onClick={()=>pathnameHandler('Contactos')}>Contactos</a>
                     </li>
                     {/* <li>
-                        <a href="#Soporte" className={`hidden lg:block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Soporte' && 'lg:text-[#00A582]' }`} onClick={()=>pathnameHandler('Soporte')}>Soporte</a>
+                        <a href="#Soporte" className={`hidden lg:block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 lg:hover:bg-transparent lg:p-0  ${active === 'Soporte' && 'lg:text-black' }`} onClick={()=>pathnameHandler('Soporte')}>Soporte</a>
                     </li> */}
                     {user && <li>
                         <Button theme="MiniPrimary" click={signOutHandler}>Cerrar sesión</Button>
