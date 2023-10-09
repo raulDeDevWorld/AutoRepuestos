@@ -26,11 +26,15 @@ export default function CardH({ image, service, description, remote, cost, time,
             <div className="w-full lg:max-w-full  md:grid lg:grid-cols-2 rounded-[15px] overflow-hidden mt-5">
                 {/* <div className="h-48 w-full rounded-t text-center md:hidden bg-blue-500" style={{ backgroundImage: `url(${image})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div> */}
                 {index % 2 == 0
-                    ? <div className='relative w-full max-h-[300px] flex justify-center'>
-                        <img src={image} className="h-full" alt="" />
+                    ? <div className='hidden lg:blockrelative w-full max-h-[300px] flex justify-center'>
+                        <img src={image} className="max-h-[300px]" alt="" />
                     </div>
                     : ''}
-
+               
+                    <div className='lg:hidden relative w-full max-h-[300px] flex justify-center'>
+                        <img src={image} className="max-h-[300px]" alt="" />
+                    </div>
+                 
                 <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8">
                         <div className=" font-bold text-xl mb-2 text-[#DC0000]">
@@ -42,7 +46,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                         </div>
                         <p className="text-gray-700 text-base">{description}</p>
                     </div>
-                   
+
                     <div className="flex items-baseline justify-between text-gray-900 dark:text-white">
                         {cost.replace(/[^0-9]/g, "").length > 0
                             ? <div>
@@ -56,8 +60,8 @@ export default function CardH({ image, service, description, remote, cost, time,
                     </div>
                 </div>
                 {index % 2 == 1
-                    ? <div className='relative w-full max-h-[300px] flex justify-center'>
-                        <img src={image} className="h-full" alt="" />
+                    ? <div className='hidden lg:block relative w-full max-h-[300px] flex justify-center'>
+                        <img src={image} className="max-h-[300px]" alt="" />
                     </div>
                     : ''
                 }
@@ -68,9 +72,9 @@ export default function CardH({ image, service, description, remote, cost, time,
             </div>}
         </>
 
-    ) 
-  
-}  
+    )
+
+}
 
 
 

@@ -52,7 +52,7 @@ function Home() {
         <div className='w-screen h-[40vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' style={{ backgroundImage: `url(${userDB.frontPage['url']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
         </div>
         {/* <img src={userDB.frontPage['url']} className='w-screen h-[35vh] flex justify-center items-end lg:w-[50vw] lg:h-[100vh]' alt="" /> */}
-        <div className=' flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto lg:p-12 pt-[20px] lg:pt-[50px]'>
+        <div className='w-full flex flex-col  justify-center lg:justify-around lg:w-[50vw] lg:h-auto lg:p-12 pt-[20px] lg:pt-[50px]'>
           {/* <div className='hidden h-[30vh] w-[30vh] lg:block' style={{ backgroundImage: `url(${userDB.frontPage['urlIMG']})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
           </div> */}
           <div className='w-full hidden lg:flex lg:justify-center'>
@@ -61,17 +61,17 @@ function Home() {
           <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
           <br />
           <div>
-            <h1 className='w-full text-center text-[16px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-gray-950 font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
-            <h1 className='w-full text-center text-[16px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-gray-950 font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-gray-950 font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-gray-950 font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
           </div>
           <br />
           {/* <div className='w-full flex justify-around' >
             <div className='flex flex-col'><span className='text-[#DC0000] text-[16px]'>Experiencia</span></div>
             <div className='flex flex-col'><span className='text-[#DC0000] text-[16px]'>Celeridad</span></div>
           </div> */}
-          <div className=' lg:grid lg:grid-cols-2 lg:gap-5 '>
-            <Link href="#Productos"><Button theme="Secondary" >Productos</Button></Link>
-            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20Alvaro`}><Button theme="Primary" >Contactar</Button></Link>
+          <div className='w-full  lg:grid lg:grid-cols-2 lg:gap-5 '>
+            <Link href="#Productos" className='w-full'><Button theme="Secondary" >Productos</Button></Link>
+            <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20Alvaro`} className='w-full'><Button theme="Primary" >Contactar</Button></Link>
           </div>
         </div>
       </section>
@@ -127,7 +127,7 @@ function Home() {
       <Navleft funcion={handlerState}></Navleft>
       <img src="/whatsapp.svg" className="fixed h-[50px] w-[50px] bottom-[80px] right-[20px] lg:bottom-[20px] z-30" onClick={whatsappHandler} alt="" />
 
-      <div className={`fixed bottom-[80px] right-[20px] pt-14 pb-9 px-2 flex flex-grow flex-col justify-end rounded-[10px] border-gray-200 shadow bg-[#F1E6E0] ${whatsapp ? 'fixed' : 'hidden'} z-50`} >
+      <div className={`w-[80%] max-w-[400px] fixed bottom-[80px] lg:bottom-[20px] right-[20px] pt-14 pb-9 px-2 flex flex-grow flex-col justify-end rounded-[10px] border-gray-200 shadow bg-[#F1E6E0] ${whatsapp ? 'fixed' : 'hidden'} z-50`} >
         <div className='absolute top-0 left-0  w-full h-[50px] bg-[#00826A] rounded-t-[10px]'>
           <img src="/perfil.jpg" className='absolute h-[35px] w-[35px] left-[5px] top-[7.5px]  rounded-[35px]' alt="" />
           <div className='absolute flex flex-col left-[50px] top-[12px] text-white text-[12px]'>
@@ -147,18 +147,18 @@ function Home() {
         </div>
 
         <div className='flex absolute w-full left-0 bottom-0'>
-          <input type="text" className=' w-full text-[12px] rounded-[20px] outline-none px-[10px]' onChange={onChangeWhatsapp} />
-          <span className='w-[24px] p-[3px] bg-[#00826A] rounded-[20px]' onClick={handlerSendWhatsapp}><img src="/send.svg" className='h-[18px]' alt="" /></span>
+          <input type="text" className=' w-full text-[12px] rounded-[20px] outline-none px-[10px] py-[2px]' onChange={onChangeWhatsapp} />
+          <span className='w-[28px] p-[5px] bg-[#00826A] rounded-[20px]' onClick={handlerSendWhatsapp}><img src="/send.svg" className='h-[18px]' alt="" /></span>
         </div>
       </div>
 
-      <footer className="w-full bg-neutral-900 text-center text-white mt-[70px] z-20" id="Contactos">
+      <footer className="w-screen bg-neutral-900 text-center text-white mt-[70px] z-20" id="Contactos">
         <div className="p-4">
-          <h3 className={`w-full text-[#DC0000] text-left font-bold text-[26px] pl-[5px]`}>Contactos</h3>
+          <h3 className={`w-full text-white text-left font-bold text-[26px] pl-[5px]`}>Contactos</h3>
           <br />
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M31.7656 33.5626L35.2656 30.0626C35.737 29.597 36.3335 29.2783 36.9825 29.1452C37.6315 29.012 38.3052 29.0702 38.9219 29.3126L43.1875 31.0157C43.8106 31.2686 44.3449 31.7004 44.7231 32.2565C45.1013 32.8126 45.3063 33.4682 45.3125 34.1407V41.9532C45.3089 42.4107 45.2127 42.8627 45.0298 43.282C44.8469 43.7013 44.581 44.0793 44.2482 44.3931C43.9153 44.707 43.5224 44.9502 43.0931 45.1083C42.6637 45.2663 42.2069 45.3358 41.75 45.3126C11.8594 43.4532 5.82812 18.1407 4.6875 8.45319C4.63455 7.97746 4.68292 7.49592 4.82945 7.04024C4.97597 6.58455 5.21731 6.16505 5.5376 5.80934C5.85789 5.45363 6.24987 5.16976 6.68774 4.97641C7.12562 4.78307 7.59947 4.68463 8.07812 4.68756H15.625C16.2984 4.68956 16.9559 4.89298 17.5128 5.27167C18.0697 5.65036 18.5006 6.187 18.75 6.81256L20.4531 11.0782C20.7035 11.6924 20.7674 12.3667 20.6368 13.017C20.5062 13.6672 20.1869 14.2646 19.7187 14.7344L16.2187 18.2344C16.2187 18.2344 18.2344 31.8751 31.7656 33.5626Z" fill="#00A582" />
+              <path d="M31.7656 33.5626L35.2656 30.0626C35.737 29.597 36.3335 29.2783 36.9825 29.1452C37.6315 29.012 38.3052 29.0702 38.9219 29.3126L43.1875 31.0157C43.8106 31.2686 44.3449 31.7004 44.7231 32.2565C45.1013 32.8126 45.3063 33.4682 45.3125 34.1407V41.9532C45.3089 42.4107 45.2127 42.8627 45.0298 43.282C44.8469 43.7013 44.581 44.0793 44.2482 44.3931C43.9153 44.707 43.5224 44.9502 43.0931 45.1083C42.6637 45.2663 42.2069 45.3358 41.75 45.3126C11.8594 43.4532 5.82812 18.1407 4.6875 8.45319C4.63455 7.97746 4.68292 7.49592 4.82945 7.04024C4.97597 6.58455 5.21731 6.16505 5.5376 5.80934C5.85789 5.45363 6.24987 5.16976 6.68774 4.97641C7.12562 4.78307 7.59947 4.68463 8.07812 4.68756H15.625C16.2984 4.68956 16.9559 4.89298 17.5128 5.27167C18.0697 5.65036 18.5006 6.187 18.75 6.81256L20.4531 11.0782C20.7035 11.6924 20.7674 12.3667 20.6368 13.017C20.5062 13.6672 20.1869 14.2646 19.7187 14.7344L16.2187 18.2344C16.2187 18.2344 18.2344 31.8751 31.7656 33.5626Z" fill="white" />
             </svg>
             <span className='pl-[20px]'>
               {userDB.contactos && userDB.contactos.telefono} - {userDB.contactos && userDB.contactos.celular}
@@ -167,8 +167,8 @@ function Home() {
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1_443)">
-                <path d="M44.9028 8.33348C44.7135 8.31397 44.5227 8.31397 44.3333 8.33348H5.44445C5.19521 8.33732 4.94762 8.37469 4.70834 8.44459L24.7778 28.4307L44.9028 8.33348Z" fill="#00A582" />
-                <path d="M46.9583 10.2637L26.7361 30.4026C26.2156 30.9199 25.5116 31.2103 24.7778 31.2103C24.0439 31.2103 23.3399 30.9199 22.8194 30.4026L2.77776 10.4164C2.71615 10.6429 2.68348 10.8762 2.68054 11.1109V38.8887C2.68054 39.6254 2.9732 40.3319 3.49413 40.8529C4.01507 41.3738 4.72161 41.6664 5.45832 41.6664H44.3472C45.0839 41.6664 45.7905 41.3738 46.3114 40.8529C46.8323 40.3319 47.125 39.6254 47.125 38.8887V11.1109C47.1139 10.8215 47.0577 10.5357 46.9583 10.2637ZM7.3611 38.8887H5.43054V36.9026L15.5278 26.8887L17.4861 28.847L7.3611 38.8887ZM44.3194 38.8887H42.375L32.25 28.847L34.2083 26.8887L44.3055 36.9026L44.3194 38.8887Z" fill="#00A582" />
+                <path d="M44.9028 8.33348C44.7135 8.31397 44.5227 8.31397 44.3333 8.33348H5.44445C5.19521 8.33732 4.94762 8.37469 4.70834 8.44459L24.7778 28.4307L44.9028 8.33348Z" fill="white" />
+                <path d="M46.9583 10.2637L26.7361 30.4026C26.2156 30.9199 25.5116 31.2103 24.7778 31.2103C24.0439 31.2103 23.3399 30.9199 22.8194 30.4026L2.77776 10.4164C2.71615 10.6429 2.68348 10.8762 2.68054 11.1109V38.8887C2.68054 39.6254 2.9732 40.3319 3.49413 40.8529C4.01507 41.3738 4.72161 41.6664 5.45832 41.6664H44.3472C45.0839 41.6664 45.7905 41.3738 46.3114 40.8529C46.8323 40.3319 47.125 39.6254 47.125 38.8887V11.1109C47.1139 10.8215 47.0577 10.5357 46.9583 10.2637ZM7.3611 38.8887H5.43054V36.9026L15.5278 26.8887L17.4861 28.847L7.3611 38.8887ZM44.3194 38.8887H42.375L32.25 28.847L34.2083 26.8887L44.3055 36.9026L44.3194 38.8887Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_1_443">
@@ -183,7 +183,7 @@ function Home() {
           </p>
           <p className='w-full flex justify-start items-center py-4'>
             <svg width="36" height="44" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 0.125C13.4432 0.130376 9.07464 1.94292 5.85253 5.16504C2.63041 8.38716 0.817864 12.7557 0.812488 17.3125C0.80703 21.0363 2.02339 24.659 4.27499 27.625C4.27499 27.625 4.74374 28.2422 4.8203 28.3312L18 43.875L31.1859 28.3234C31.2547 28.2406 31.725 27.625 31.725 27.625L31.7265 27.6203C33.977 24.6556 35.1928 21.0346 35.1875 17.3125C35.1821 12.7557 33.3696 8.38716 30.1474 5.16504C26.9253 1.94292 22.5567 0.130376 18 0.125ZM18 23.5625C16.7639 23.5625 15.5555 23.1959 14.5277 22.5092C13.4999 21.8224 12.6988 20.8463 12.2257 19.7043C11.7527 18.5622 11.6289 17.3056 11.8701 16.0932C12.1112 14.8808 12.7065 13.7672 13.5806 12.8931C14.4546 12.019 15.5683 11.4237 16.7807 11.1826C17.9931 10.9414 19.2497 11.0652 20.3918 11.5383C21.5338 12.0113 22.5099 12.8124 23.1967 13.8402C23.8834 14.868 24.25 16.0764 24.25 17.3125C24.2479 18.9695 23.5888 20.558 22.4171 21.7296C21.2455 22.9013 19.657 23.5604 18 23.5625Z" fill="#00A582" />
+              <path d="M18 0.125C13.4432 0.130376 9.07464 1.94292 5.85253 5.16504C2.63041 8.38716 0.817864 12.7557 0.812488 17.3125C0.80703 21.0363 2.02339 24.659 4.27499 27.625C4.27499 27.625 4.74374 28.2422 4.8203 28.3312L18 43.875L31.1859 28.3234C31.2547 28.2406 31.725 27.625 31.725 27.625L31.7265 27.6203C33.977 24.6556 35.1928 21.0346 35.1875 17.3125C35.1821 12.7557 33.3696 8.38716 30.1474 5.16504C26.9253 1.94292 22.5567 0.130376 18 0.125ZM18 23.5625C16.7639 23.5625 15.5555 23.1959 14.5277 22.5092C13.4999 21.8224 12.6988 20.8463 12.2257 19.7043C11.7527 18.5622 11.6289 17.3056 11.8701 16.0932C12.1112 14.8808 12.7065 13.7672 13.5806 12.8931C14.4546 12.019 15.5683 11.4237 16.7807 11.1826C17.9931 10.9414 19.2497 11.0652 20.3918 11.5383C21.5338 12.0113 22.5099 12.8124 23.1967 13.8402C23.8834 14.868 24.25 16.0764 24.25 17.3125C24.2479 18.9695 23.5888 20.558 22.4171 21.7296C21.2455 22.9013 19.657 23.5604 18 23.5625Z" fill="white" />
             </svg>
             <span className='pl-[34px]'>
               {userDB.contactos && userDB.contactos['direccion 1']} <br />
