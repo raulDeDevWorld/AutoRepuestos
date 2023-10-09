@@ -50,7 +50,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                     <div className="flex items-baseline justify-between text-gray-900 dark:text-white">
                         {cost.replace(/[^0-9]/g, "").length > 0
                             ? <div>
-                                <span className="text-3xl font-semibold">BOB</span>
+                                <span className="text-3xl font-semibold">BS</span>
                                 <span className="text-5xl font-extrabold tracking-tight mr-[5px] lg:mr-[20px]">{cost}</span>
                             </div>
                             : <span className="text-2xl font-semibold">{cost}</span>}

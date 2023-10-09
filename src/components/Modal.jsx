@@ -279,7 +279,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                 <input type="text" name="marca" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item['marca']} />
                             </div>
                             <div className="sm:col-span-3">
-                                <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Descripción de servicio</label>
+                                <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Descripción de producto</label>
                                 <input type="text" name="descripcion de servicio" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item['descripcion de servicio']} />
                             </div>
                         
