@@ -37,10 +37,10 @@ export default function CardH({ image, service, description, remote, cost, time,
                  
                 <div className="px-2 py-4 md:p-4 flex flex-col justify-between leading-normal">
                     <div className="mb-8">
-                        <div className=" font-bold text-xl mb-2 text-[#DC0000]">
+                        <div className=" font-bold text-xl mb-2 text-[#CA5DB6]">
                             {service}
                             <p className="w-full text-sm text-gray-600 flex items-center justify-start text-right font-normal">
-                                <span className={`inline-block h-[5px] w-[5px] mr-[5px] rounded-[5px] bg-[#DC0000] }`}>
+                                <span className={`inline-block h-[5px] w-[5px] mr-[5px] rounded-[5px] bg-[#CA5DB6] }`}>
                                 </span> {i.marca}
                             </p>
                         </div>
@@ -55,7 +55,7 @@ export default function CardH({ image, service, description, remote, cost, time,
                             </div>
                             : <span className="text-2xl font-semibold">{cost}</span>}
                         <Link href={`https://api.whatsapp.com/send?phone=${whatsapp}&text=Hola%20Alvaro`}>
-                            <Button theme='Primary'>Comprar Producto</Button>
+                            <Button theme='Secondary'>Solicitar ya...</Button>
                         </Link>
                     </div>
                 </div>

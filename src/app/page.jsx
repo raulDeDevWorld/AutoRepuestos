@@ -61,14 +61,26 @@ function Home() {
           <h1 className='w-full hidden  lg:block text-center text-[12px] lg:text-[16px]'>{userDB.frontPage['direccion']} </h1>
           <br />
           <div>
-            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-gray-950 font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
-            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#DC0000] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-gray-950 font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#CA5DB6] font-bold'>{userDB.frontPage['nombre']}</span><span className='text-[#01A8A1] font-bold	'>{userDB.frontPage['apellidos']}</span></h1>
+            <h1 className='w-full text-center text-[20px] lg:text-[22px]'><span className='text-[#CA5DB6] font-bold'>{userDB.frontPage['especialidad 1']} </span><span className='text-[#01A8A1] font-bold	'>{userDB.frontPage['especialidad 2']}</span></h1>
           </div>
           <br />
           {/* <div className='w-full flex justify-around' >
-            <div className='flex flex-col'><span className='text-[#DC0000] text-[16px]'>Experiencia</span></div>
-            <div className='flex flex-col'><span className='text-[#DC0000] text-[16px]'>Celeridad</span></div>
-          </div> */}
+            <div className='flex flex-col'><span className='text-[#CA5DB6] text-[16px]'>Experiencia</span></div>
+            <div className='flex flex-col'><span className='text-[#CA5DB6] text-[16px]'>Celeridad</span></div>
+          </div> 
+          
+          
+          
+          CA5DB6
+          
+          EED7EB
+          
+          01A8A1
+          
+          
+          
+          */}
           <div className='w-full  lg:grid lg:grid-cols-2 lg:gap-5 '>
             <Link href="#Productos" className='w-full'><Button theme="Secondary" >Productos</Button></Link>
             <Link href={`https://api.whatsapp.com/send?phone=${userDB.frontPage['whatsapp']}&text=Hola%20Alvaro`} className='w-full'><Button theme="Primary" >Contactar</Button></Link>
@@ -85,8 +97,8 @@ function Home() {
                 <div key={index}>
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
                   <div className="inline-flex items-center justify-center w-full">
-                    <hr className="w-64 h-px my-8 bg-[#DC0000] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#DC0000] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
+                    <hr className="w-64 h-px my-8 bg-[#CA5DB6] border-0 dark:bg-gray-700" />
+                    <span className="absolute px-3 font-medium text-[#CA5DB6] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
                   </div>
                 </div>
               )
@@ -115,8 +127,8 @@ function Home() {
                 <div key={index}>
                   <CardH image={i['url']} service={i['titulo de servicio']} description={i['descripcion de servicio']} remote={i['servicio remoto']} cost={i['costo']} time={i['tiempo de entrega']} whatsapp={i['whatsapp de servicio']} i={i} index={index}></CardH>
                   <div className="inline-flex items-center justify-center w-full">
-                    <hr className="w-64 h-px my-8 bg-[#DC0000] border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium text-[#DC0000] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
+                    <hr className="w-64 h-px my-8 bg-[#CA5DB6] border-0 dark:bg-gray-700" />
+                    <span className="absolute px-3 font-medium text-[#CA5DB6] -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900 z-0">•</span>
                   </div>
                 </div>
               )
@@ -152,7 +164,7 @@ function Home() {
         </div>
       </div>
 
-      <footer className="w-screen bg-neutral-900 text-center text-white mt-[70px] z-20" id="Contactos">
+      <footer className="w-screen bg-[#01A8A1] text-center text-white mt-[70px] z-20" id="Contactos">
         <div className="p-4">
           <h3 className={`w-full text-white text-left font-bold text-[26px] pl-[5px]`}>Contactos</h3>
           <br />
